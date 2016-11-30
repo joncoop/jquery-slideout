@@ -96,15 +96,13 @@ $(document).ready(function(){
   $("a").click(function(){
      $(".slideout").removeClass("slideout-shown");
   });
-});
 
-$(document).on("mobileinit", function(){
   // jquery mobile stuff
-  $(".slideout").on("swipeleft",function(){
+  $(".slideout").bind("swipeleft",function(){
     $(".slideout").removeClass("slideout-shown");
   });
 
-  $(document.body).on("swiperight",function(event){
+  $(document.body).bind("swiperight",function(event){
     if (event.swipestart.coords[0] < 30) {
       $(".slideout").addClass("slideout-shown");
     }
