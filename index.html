@@ -35,7 +35,7 @@
       </div>
 
       <div class="slideout">
-        <div class="slideout-dismiss">&#x274C;</div>
+        <div class="slideout-dismiss">&#x274C;</div><!-- why is the X red on android? -->
 
         <div class="slideout-menu">
           <h1 class="slideout-brand"><a href="#">JQuery Slideout</a></h1>
@@ -55,6 +55,16 @@
     <h2>Welcome</h2>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h3>Some features to add</h3>
+    <ul>
+      <li>Swipe doesn't seem to be working on android</li>
+      <li>Why is X red on android?</li>
+      <li>Dim background when slideout active</li>
+      <li>Dismiss when tap off slideout</li>
+      <li>Disable scroll when slideout active</li>
+      <li>Enable scroll within slideout while active</li>
+    </ul>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -77,14 +87,14 @@
 $(document).ready(function(){
   // regular jquery stuff
   $(".slideout-toggle, .slideout-dismiss").click(function(){
-      $(".slideout").toggleClass("slideout-shown");
+    $(".slideout").toggleClass("slideout-shown");
   });
 
   $("a").click(function(){
-      $(".slideout").removeClass("slideout-shown");
+     $(".slideout").removeClass("slideout-shown");
   });
 
-  // touch stuff
+  // touch stuff (this doesn't seem to be working on android even though it works on emulator)
   $(".slideout").on("swipeleft", dismissSlideout);
   $(document.body).on("swiperight", showSlideout);
 
