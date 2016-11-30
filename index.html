@@ -38,6 +38,8 @@
           X
         </div>
 
+        <div class="slideout-handle"></div>
+
         <div class="slideout-menu">
           <ul>
             <li><a href="#">Home</a></li>
@@ -77,15 +79,14 @@ $(document).ready(function(){
     $(".slideout-toggle, .slideout-dismiss").click(function(){
         $(".slideout").toggleClass("slideout-shown");
     });
-});
-</script>
 
-<script>
-$(function(){
-  $( ".slideout" ).on( "swipeleft", swipeHandler );
-  function swipeHandler( event ){
-    $( event.target ).toggleClass( "slideout-shown" );
-  }
+    $(function(){
+      $(".slideout").on("swipeleft", dismissSlideout);
+
+      function dismissSlideout(event){
+        $(event.target).removeClass("slideout-shown");
+      }
+    });
 });
 </script>
 
