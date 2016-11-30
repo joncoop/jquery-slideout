@@ -38,6 +38,32 @@
   display: block;
 }
 
+.slideout {
+  background-color: #ccc;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 280px;
+}
+
+.slideout-brand {
+
+}
+
+.slideout-menu {
+
+}
+
+.slideout-menu ul {
+    flex-direction: column;
+}
+
+.slideout-menu li {
+    padding: 0.4rem;
+}
+
 @media screen and (max-width: 767px) {
 
   .navbar {
