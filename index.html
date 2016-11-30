@@ -78,23 +78,19 @@ $(document).ready(function(){
       $(".slideout").toggleClass("slideout-shown");
   });
 
-  $(function(){
-    $(".slideout").on("swipeleft", dismissSlideout);
+  $(".slideout").on("swipeleft", dismissSlideout);
+  $(document.body).on("swiperight", showSlideout);
 
-    function dismissSlideout(event){
-      $(event.target).removeClass("slideout-shown");
+  function dismissSlideout(event){
+    $(event.target).removeClass("slideout-shown");
+  }
+
+  function showSlideout(event){
+    if (event.swipestart.coords[0] < 30) {
+      $(".slideout").addClass("slideout-shown");
     }
-  });
+  }
 
-  $(function(){
-    $(document.body).on("swiperight", showSlideout);
-
-    function showSlideout(event){
-      if (event.swipestart.coords[0] < 50) {
-        $(".slideout").addClass("slideout-shown");
-      }
-    }
-  });
 });
 </script>
 
