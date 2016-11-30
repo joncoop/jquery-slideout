@@ -95,19 +95,15 @@ $(document).ready(function(){
      $(".slideout").removeClass("slideout-shown");
   });
 
-  // touch stuff (this doesn't seem to be working on android even though it works on emulator)
-  $(".slideout").on("swipeleft", dismissSlideout);
-  $(document.body).on("swiperight", showSlideout);
+  $(".slideout").on("swipeleft",function(){
+    $(".slideout").removeClass("slideout-shown");
+  });
 
-  function dismissSlideout(event){
-    $(event.target).removeClass("slideout-shown");
-  }
-
-  function showSlideout(event){
+  $(document.body).on("swiperight",function(event){
     if (event.swipestart.coords[0] < 30) {
       $(".slideout").addClass("slideout-shown");
     }
-  }
+  });
 });
 </script>
 
