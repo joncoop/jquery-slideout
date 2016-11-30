@@ -30,10 +30,6 @@
     margin: 0;
 }
 
-.navbar-toggle {
-  display: none;
-}
-
 .navbar-menu {
   display: block;
 }
@@ -44,12 +40,26 @@
   height: 100%;
   position: absolute;
   top:0;
-  left: 0;
+  left: -280px;
   width: 280px;
+
+  transition: 0.4s;
 }
 
-.slideout-brand {
+.slideout-shown {
+  left: 0;
+  transition: 0.4s;
+}
 
+.slideout-toggle {
+  display: none;
+}
+
+.slideout-dismiss {
+  position: absolute;
+  right: 0;
+  padding: 0.4rem;
+  top: 0;
 }
 
 .slideout-menu {
@@ -70,12 +80,13 @@
       justify-content: flex-start;
   }
 
-  .navbar-toggle {
+  .navbar-menu {
+    display: none;
+  }
+
+  .slideout-toggle {
     display: block;
     padding: 0.4rem;
   }
 
-  .navbar-menu {
-    display: none;
-  }
 }

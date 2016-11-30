@@ -20,7 +20,7 @@
 
   <header>
     <nav class="navbar">
-      <span class="navbar-toggle">MENU</span>
+      <span class="slideout-toggle">MENU</span>
 
       <h1 class="navbar-brand"><a href="#">JQuery Slideout</a></h1>
 
@@ -34,8 +34,8 @@
       </div>
 
       <div class="slideout">
-        <div class="slideout-brand">
-
+        <div class="slideout-dismiss">
+          X
         </div>
 
         <div class="slideout-menu">
@@ -76,6 +76,11 @@
 </script>
 
 <script>
+$(document).ready(function(){
+    $(".slideout-toggle, .slideout-dismiss").click(function(){
+        $(".slideout").toggleClass("slideout-shown");
+    });
+});
 </script>
 
 </body>
