@@ -83,8 +83,10 @@
 
 
 <!-- include any javascript below this line -->
+
+<!-- What the hell does this mean? https://api.jquerymobile.com/mobileinit/ -->
+
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -96,7 +98,11 @@ $(document).ready(function(){
   $("a").click(function(){
      $(".slideout").removeClass("slideout-shown");
   });
+});
+</script>
 
+<script>
+$( document ).on( "mobileinit", function() {
   // jquery mobile stuff
   $(".slideout").bind("swipeleft",function(){
     $(".slideout").removeClass("slideout-shown");
@@ -109,6 +115,8 @@ $(document).ready(function(){
   });
 });
 </script>
+
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </body>
 </html>
