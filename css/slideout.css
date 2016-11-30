@@ -1,7 +1,7 @@
 
 .navbar {
   align-items: center;
-  background-color: #0af;
+  background-color: #bbb;
   display: flex;
   justify-content: space-between;
   padding: 0.4rem;
@@ -35,7 +35,7 @@
 }
 
 .slideout {
-  background-color: #ccc;
+  background-color: #777;
   display: block;
   height: 100%;
   position: absolute;
@@ -66,12 +66,25 @@
 
 }
 
+.slideout-brand {
+  padding: 0.4rem;
+}
+
+.slideout-brand a {
+  color: #eee;
+}
+
 .slideout-menu ul {
     flex-direction: column;
 }
 
 .slideout-menu li {
-    padding: 0.4rem;
+  font-size: 18px;
+  padding: 0.4rem;
+}
+
+.slideout-menu li a {
+  color: #eee;
 }
 
 @media screen and (max-width: 767px) {
@@ -86,7 +99,8 @@
 
   .slideout-toggle {
     display: block;
-    padding: 0.4rem;
+    margin-right: 0.4rem;
+    padding: 0.2rem;
   }
 
 }

@@ -13,10 +13,16 @@ main {
 }
 
 footer {
-
+  border-top: 1px solid #bbb;
+  padding: 0.6rem;
+  text-align: center;
 }
 
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+h1 {
+  font-size: 20px;
 }
