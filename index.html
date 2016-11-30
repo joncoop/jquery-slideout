@@ -38,8 +38,6 @@
           X
         </div>
 
-        <div class="slideout-handle"></div>
-
         <div class="slideout-menu">
           <ul>
             <li><a href="#">Home</a></li>
@@ -76,17 +74,27 @@
 
 <script>
 $(document).ready(function(){
-    $(".slideout-toggle, .slideout-dismiss").click(function(){
-        $(".slideout").toggleClass("slideout-shown");
-    });
+  $(".slideout-toggle, .slideout-dismiss").click(function(){
+      $(".slideout").toggleClass("slideout-shown");
+  });
 
-    $(function(){
-      $(".slideout").on("swipeleft", dismissSlideout);
+  $(function(){
+    $(".slideout").on("swipeleft", dismissSlideout);
 
-      function dismissSlideout(event){
-        $(event.target).removeClass("slideout-shown");
+    function dismissSlideout(event){
+      $(event.target).removeClass("slideout-shown");
+    }
+  });
+
+  $(function(){
+    $(document.body).on("swiperight", showSlideout);
+
+    function showSlideout(event){
+      if (event.swipestart.coords[0] < 50) {
+        $(".slideout").addClass("slideout-shown");
       }
-    });
+    }
+  });
 });
 </script>
 

@@ -62,15 +62,6 @@
   top: 0;
 }
 
-.slideout-handle {
-  background-color: #eee;
-  position: absolute;
-  height: 100%;
-  top: 0;
-  right: -50px;
-  width: 50px;
-}
-
 .slideout-menu {
 
 }
