@@ -35,9 +35,7 @@
       </div>
 
       <div class="slideout">
-        <div class="slideout-dismiss">
-          X
-        </div>
+        <div class="slideout-dismiss">&#x274C;</div>
 
         <div class="slideout-menu">
           <h1 class="slideout-brand"><a href="#">JQuery Slideout</a></h1>
@@ -77,10 +75,16 @@
 
 <script>
 $(document).ready(function(){
-  $(".slideout-toggle, .slideout-dismiss, a").click(function(){
+  // regular jquery stuff
+  $(".slideout-toggle, .slideout-dismiss").click(function(){
       $(".slideout").toggleClass("slideout-shown");
   });
 
+  $("a").click(function(){
+      $(".slideout").removeClass("slideout-shown");
+  });
+
+  // touch stuff
   $(".slideout").on("swipeleft", dismissSlideout);
   $(document.body).on("swiperight", showSlideout);
 

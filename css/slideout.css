@@ -1,7 +1,6 @@
-
 .navbar {
   align-items: center;
-  background-color: #bbb;
+  background-color: #ccc;
   display: flex;
   justify-content: space-between;
   padding: 0.4rem;
@@ -23,11 +22,15 @@
 }
 
 .navbar a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .navbar-brand {
-    margin: 0;
+  margin: 0;
+}
+
+.navbar-brand a{
+  color: #444;
 }
 
 .navbar-menu {
@@ -35,15 +38,14 @@
 }
 
 .slideout {
-  background-color: #777;
+  background-color: #bbb;
   display: block;
   height: 100%;
+  left: -280px;
   position: absolute;
   top:0;
-  left: -280px;
-  width: 280px;
-
   transition: 0.4s;
+  width: 280px;
 }
 
 .slideout-shown {
@@ -56,9 +58,11 @@
 }
 
 .slideout-dismiss {
-  position: absolute;
+  color: #eee;
+  font-size: 20px;
   right: 0;
   padding: 0.4rem;
+  position: absolute;
   top: 0;
 }
 
@@ -67,6 +71,8 @@
 }
 
 .slideout-brand {
+  background-color: #555;
+  margin: 0 0 0.4rem 0;
   padding: 0.4rem;
 }
 
@@ -75,7 +81,7 @@
 }
 
 .slideout-menu ul {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 .slideout-menu li {
@@ -84,13 +90,13 @@
 }
 
 .slideout-menu li a {
-  color: #eee;
+  color: #555;
 }
 
 @media screen and (max-width: 767px) {
 
   .navbar {
-      justify-content: flex-start;
+    justify-content: flex-start;
   }
 
   .navbar-menu {
@@ -102,5 +108,4 @@
     margin-right: 0.4rem;
     padding: 0.2rem;
   }
-
 }

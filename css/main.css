@@ -13,7 +13,7 @@ main {
 }
 
 footer {
-  border-top: 1px solid #bbb;
+  border-top: 1px solid #ccc;
   padding: 0.6rem;
   text-align: center;
 }
@@ -25,4 +25,9 @@ footer {
 
 h1 {
   font-size: 20px;
+}
+
+h2 {
+  color: #555;
+  font-size: 24px;
 }
