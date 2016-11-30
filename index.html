@@ -96,7 +96,9 @@ $(document).ready(function(){
   $("a").click(function(){
      $(".slideout").removeClass("slideout-shown");
   });
+});
 
+$(document).on("pageinit", function(){
   // jquery mobile stuff
   $(".slideout").on("swipeleft",function(){
     $(".slideout").removeClass("slideout-shown");
