@@ -92,20 +92,20 @@
 <script>
 $(document).ready(function(){
   // regular jquery stuff
-  $(".slideout-toggle, .slideout-dismiss").click(function(){
+  $(".slideout-toggle").click(function(){
     $(".slideout").toggleClass("slideout-shown");
   });
 
-  $("a").click(function(){
+  $("a, .slideout-dismiss").click(function(){
      $(".slideout").removeClass("slideout-shown");
   });
 
   // jquery mobile stuff
-  $(".slideout").bind("swipeleft",function(){
+  $(".slideout").on("swipeleft",function(){
     $(".slideout").removeClass("slideout-shown");
   });
 
-  $(document.body).bind("swiperight",function(event){
+  $(document.body).on("swiperight",function(event){
     if (event.swipestart.coords[0] < 30) {
       $(".slideout").addClass("slideout-shown");
     }
